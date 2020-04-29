@@ -1,0 +1,3 @@
+services:
+  App\Registry\ValidationRegistry:
+    class: App\Registry\ValidationRegistry

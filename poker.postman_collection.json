@@ -1,0 +1,340 @@
+{
+	"info": {
+		"_postman_id": "2885b642-9b8e-407b-8627-362277b95b1f",
+		"name": "Test",
+		"description": "local api example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d29cd98c-beb7-448f-9179-be083c7dbfab",
+						"exec": [
+							"let jsonData = JSON.parse(responseBody);",
+							"postman.clearGlobalVariable(\"token\");",
+							"postman.setGlobalVariable(\"token\", jsonData.token);",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Api-Version",
+						"value": "4.4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"matkozikowski@gmail.com\",\n\t\"password\": \"Test123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d29cd98c-beb7-448f-9179-be083c7dbfab",
+						"exec": [
+							"let jsonData = JSON.parse(responseBody);",
+							"postman.clearGlobalVariable(\"token\");",
+							"postman.setGlobalVariable(\"token\", jsonData.token);",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Api-Version",
+						"value": "4.4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"token\":\"1ae833c09cf254cea63c2345f732c44810b6dd01afa42df4985350c18736f0cfdf2a3d2c6c0c92610cb772011edffcf33a8c9f79dd69f16417881bde\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d29cd98c-beb7-448f-9179-be083c7dbfab",
+						"exec": [
+							"let jsonData = JSON.parse(responseBody);",
+							"postman.clearGlobalVariable(\"token\");",
+							"postman.setGlobalVariable(\"token\", jsonData.token);",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Api-Version",
+						"value": "4.4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"token\": \"a5a7771ae50dcb936af47cc250366947c8f405e0e1b922b38dc112e63e92c6bef04b5beef3fc6fb66e577cc368e01783dfe865a68ac08407d07b8c46\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/profile",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UploadFile",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d29cd98c-beb7-448f-9179-be083c7dbfab",
+						"exec": [
+							"let jsonData = JSON.parse(responseBody);",
+							"postman.clearGlobalVariable(\"token\");",
+							"postman.setGlobalVariable(\"token\", jsonData.token);",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Api-Version",
+						"value": "4.4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"file\":\"directory to file\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/upload",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Scores",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d29cd98c-beb7-448f-9179-be083c7dbfab",
+						"exec": [
+							"let jsonData = JSON.parse(responseBody);",
+							"postman.clearGlobalVariable(\"token\");",
+							"postman.setGlobalVariable(\"token\", jsonData.token);",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Api-Version",
+						"value": "4.4",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"token\": \"a5a7771ae50dcb936af47cc250366947c8f405e0e1b922b38dc112e63e92c6bef04b5beef3fc6fb66e577cc368e01783dfe865a68ac08407d07b8c46\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/scores",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"scores"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

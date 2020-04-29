@@ -1,0 +1,50 @@
+services:
+  App\Validation\RoyalFlushValidation:
+    class: App\Validation\RoyalFlushValidation
+    tags:
+      - { name: validation.poker_game, priority: 1 }
+
+  App\Validation\StraightFlushValidation:
+    class: App\Validation\StraightFlushValidation
+    tags:
+      - { name: validation.poker_game, priority: 2 }
+
+  App\Validation\FourKindValidation:
+    class: App\Validation\FourKindValidation
+    tags:
+      - { name: validation.poker_game, priority: 3 }
+
+  App\Validation\FullHouseValidation:
+    class: App\Validation\FullHouseValidation
+    tags:
+      - { name: validation.poker_game, priority: 4 }
+
+  App\Validation\FlushValidation:
+    class: App\Validation\FlushValidation
+    tags:
+      - { name: validation.poker_game, priority: 5 }
+
+  App\Validation\StraightValidation:
+    class: App\Validation\StraightValidation
+    tags:
+      - { name: validation.poker_game, priority: 6 }
+
+  App\Validation\ThreeKindValidation:
+    class: App\Validation\ThreeKindValidation
+    tags:
+      - { name: validation.poker_game, priority: 7 }
+
+  App\Validation\TwoPairValidation:
+    class: App\Validation\TwoPairValidation
+    tags:
+      - { name: validation.poker_game, priority: 8 }
+
+  App\Validation\OnePairValidation:
+    class: App\Validation\OnePairValidation
+    tags:
+      - { name: validation.poker_game, priority: 9 }
+
+  App\Validation\HighCardValidation:
+    class: App\Validation\HighCardValidation
+    tags:
+      - { name: validation.poker_game, priority: 10 }

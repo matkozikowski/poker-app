@@ -1,0 +1,24 @@
+api_register:
+    path: /api/auth/register
+    controller:  App\Controller\Api\ApiAuthController:register
+    methods: [POST]
+
+api_login:
+    path: /api/auth/login
+    controller: App\Controller\Api\ApiAuthController:login
+    methods:  [POST]
+
+api_profile:
+    path: /api/auth/profile
+    controller: App\Controller\Api\ApiAuthController:profile
+    methods:  [GET]
+
+api_score:
+    path: /api/scores
+    controller: App\Controller\Api\ApiController::scores
+    methods: [GET]
+
+api_upload:
+    path: /api/upload
+    controller: App\Controller\Api\ApiController::upload
+    methods: [PUT]

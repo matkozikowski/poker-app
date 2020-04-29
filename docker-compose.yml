@@ -1,0 +1,16 @@
+version: '3.3'
+volumes:
+  data-volume: {}
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'poker'
+      MYSQL_USER: 'master'
+      MYSQL_PASSWORD: 'RjP79Aaj7dfV'
+      MYSQL_ROOT_PASSWORD: 'RjP79Aaj7dfV'
+    ports:
+      - '3310:3306'
+    expose:
+      - '3306'

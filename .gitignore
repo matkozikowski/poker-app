@@ -1,0 +1,8 @@
+# dependencies
+.idea
+/vendor
+
+# misc
+#.env
+
+
