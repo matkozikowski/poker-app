@@ -11,10 +11,19 @@ Example poker app with input file
 - run phpunit in app directory ``php bin/phpunit tests/Util``
 - example url for upload file: ``http://127.0.0.1:8000/files/hands.txt``
 
-TO run application:
+To run application:
+1. run /bin/bash run.sh
+
+TO run application manually:
 1. run: ``docker-compose up -d``
-2. run: ``symfony server:start``
-3. Import poker.postman_collection.json int POSTMAN app.
+2. in app directory run ``composer install``
+2. in app directory run: ``symfony server:start``
+3. in app directory run ``php bin/console doctrine:migrations:migrate``
+3. Import poker.postman_collection.json into POSTMAN app.
+4. In postman at first:
+5 Run Login endpoint
+6 Run UploadFile endpoint
+7 Run Scores endpoint
 
 In Futuer TODO:
 - create lock PUT request per minutes to upload file
